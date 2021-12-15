@@ -2,6 +2,8 @@
   <div class="app">
     <router-link to="/login">登陆</router-link>
     <router-link to="/main">首页</router-link>
+    <el-button>hhhhh</el-button>
+    <el-input></el-input>
     <router-view></router-view>
   </div>
 </template>

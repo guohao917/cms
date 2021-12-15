@@ -1,10 +1,19 @@
-// module.exports = {
-//   outputDir: './build',
-//   configureWebpack: {
-//     resolve: {
-//       alise: {
-//         components: '@/components',
-//       }
-//     }
-//   }
-// }
+
+const AutoImport = require('unplugin-auto-import/webpack')
+const Components = require('unplugin-vue-components/webpack')
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
+
+module.exports = {
+  // 按需引入element-plus 组件
+  configureWebpack: {
+    plugins: [
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()],
+      }),
+    ],
+  },
+  outputDir: './build',
+}
