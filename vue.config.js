@@ -16,4 +16,6 @@ module.exports = {
     ],
   },
   outputDir: './build',
+  // 关闭eslint。烦的狠，人肉eslint
+  lintOnSave: false,
 }
